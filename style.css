@@ -25,21 +25,41 @@ body {
   transform: translateX(-50%);
   text-align: center;
   background: rgba(255,255,255,0.85); 
-  padding: 10px 80px;
+  padding: 10px 20px;
   border-radius: 20px;
-  max-width: 100%;
-  text-size-adjust: 60px;
+  max-width: 90%;
+}
+
+.info h2 {
+  font-size: 18px; /* ukuran nama */
+  margin: 5px 0;
+}
+
+.info p {
+  font-size: 14px; /* ukuran ID */
+  margin: 2px 0;
 }
 
 .info img {
-  width: 540px;
+  max-width: 150px; /* kecilin QR biar pas */
   height: auto;
-  margin-top: 5px;
-  margin-bottom: 10px;
 }
+
 
 .info h2 {
   font-size: 3rem;   /* perbesar ukuran teks */
   font-weight: bold; /* tebal */
   color: #000;       /* warna teks */
+}
+
+@media (max-width: 600px) {
+  .info h2 {
+    font-size: 16px;
+  }
+  .info p {
+    font-size: 12px;
+  }
+  .info img {
+    max-width: 120px;
+  }
 }
