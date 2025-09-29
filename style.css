@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+}
+
+.undangan {
+  position: relative;
+  width: 100%;      /* biar full layar HP */
+  max-width: 1080px;/* opsional, bisa dibuang kalau mau full terus */
+}
+
+.undangan .bg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.info {
+  position: absolute;
+  bottom: 130px; 
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  background: rgba(255,255,255,0.85); 
+  padding: 10px 80px;
+  border-radius: 20px;
+  max-width: 100%;
+  text-size-adjust: 60px;
+}
+
+.info img {
+  width: 540px;
+  height: auto;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.info h2 {
+  font-size: 3rem;   /* perbesar ukuran teks */
+  font-weight: bold; /* tebal */
+  color: #000;       /* warna teks */
+}
