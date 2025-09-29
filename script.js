@@ -37,5 +37,8 @@ async function getData(id) {
   }
 })();
 
-const music = document.getElementById("bg-music");
-music.volume = 0.3; // volume 30%
+  window.addEventListener("click", function() {
+    const musik = document.getElementById("musik");
+    musik.muted = false;   // matikan mute
+    musik.play();          // pastikan play
+  }, { once: true });
