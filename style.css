@@ -1,15 +1,67 @@
+/* Cover */
+html.no-scroll,
+body.no-scroll {
+  overflow: hidden; /* kunci scroll */
+  height: 100%;
+}
+
+#cover {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: #9f9f9f;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 9999;
+  overflow: hidden;
+
+    /* transition untuk animasi */
+  transition: transform 0.7s ease, opacity 0.7s ease;
+}
+
+#cover.slide-up {
+  transform: translateY(-100vh); /* geser ke atas */
+  opacity: 0;                     /* biar memudar */
+}
+
+    #cover img {
+      max-width: 100%;
+      height: auto;
+    }
+    #cover h2 {
+      margin-bottom: 20px;
+      font-size: 22px;
+    }
+    #cover button {
+      background: #005eff;
+      color: white;
+      font-size: 18px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+    .namabuka {
+      position: absolute;
+      bottom: 25%;
+    }
+
 body {
   margin: 0;
   padding: 0;
   background: #f0f0f0;
-  display: flex;
-  justify-content: center;
+  min-height: 100vh;
+  flex-direction: column; /* susun vertikal */
+  align-items: center;
 }
 
 .undangan {
   position: relative;
-  width: 100%;      /* biar full layar HP */
-  max-width: 1080px;/* opsional, bisa dibuang kalau mau full terus */
+  width: 100%;
+  max-width: 600px;   /* biar pas di desktop */
 }
 
 .undangan .bg {
@@ -20,46 +72,40 @@ body {
 
 .info {
   position: absolute;
-  bottom: 130px; 
+  bottom: 90px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  background: rgba(255,255,255,0.85); 
+  background: rgba(255, 255, 255, 0.85);
   padding: 10px 20px;
   border-radius: 20px;
   max-width: 90%;
 }
 
 .info h2 {
-  font-size: 18px; /* ukuran nama */
+  font-size: 18px;
   margin: 5px 0;
-}
-
-.info p {
-  font-size: 14px; /* ukuran ID */
-  margin: 2px 0;
+  font-weight: bold;
+  color: #000;
 }
 
 .info img {
-  max-width: 150px; /* kecilin QR biar pas */
+  max-width: 150px;
   height: auto;
-}
-
-
-.info h2 {
-  font-size: 3rem;   /* perbesar ukuran teks */
-  font-weight: bold; /* tebal */
-  color: #000;       /* warna teks */
 }
 
 @media (max-width: 600px) {
   .info h2 {
     font-size: 16px;
   }
-  .info p {
-    font-size: 12px;
-  }
   .info img {
     max-width: 120px;
   }
+}
+
+.map-container {
+  margin: 20px auto 0; /* jarak ke bawah undangan */
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
 }
